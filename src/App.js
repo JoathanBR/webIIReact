@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import ListaDeFilmes from "./components/ListaDeFilmes";
+import CadastrarFilme from "./components/CadastrarFilme";
+import "./assets/App.css";
+import './assets/index.css';
+class App extends Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  constructor(){
+    super()
+    this.state = {
+      filmes:[]
+    }
+  }
+
+  criarFilme(titulo, genero, duracao, dataLancamento, avaliacao, status, texto){
+    const novaFilme = {titulo, genero, duracao, dataLancamento, avaliacao, status, texto}
+    const novoArrayFilmes = [...this.state.filmes, novaFilme]
+    const novoEstado ={
+      filmes: novoArrayFilmes
+    }
+    this.setState(novoEstado)
+  }
+
+  render() {
+    return (
+      <section className="conteudo">
+        <CadastrarFilme criarFilme = {this.criarFilme.bind(this)} />
+        <ListaDeFilmes filmes={this.state.filmes}/>
+      </section>
+    );
+  }
 }
 
 export default App;
