@@ -9,7 +9,7 @@ class ListaDeFilmes extends Component {
         {this.props.filmes.map((filme, index) => {
           return (
             <li className="lista-filmes_item" key={index}>
-              <BannerFilme titulo={filme.titulo} genero={filme.genero} duracao={filme.duracao} dataLancamento={filme.dataLancamento} avaliacao={filme.avaliacao} status={filme.status} texto={filme.texto}/>
+              <BannerFilme titulo={filme.titulo} genero={filme.genero} duracao={filme.duracao} dataLancamento={filme.dataLancamento} avaliacao={filme.avaliacao} status={filme.status} texto={filme.texto} imagem={filme.imagem}/>
             </li>
           );
         })}

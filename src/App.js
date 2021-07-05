@@ -12,8 +12,8 @@ class App extends Component {
     }
   }
 
-  criarFilme(titulo, genero, duracao, dataLancamento, avaliacao, status, texto){
-    const novaFilme = {titulo, genero, duracao, dataLancamento, avaliacao, status, texto}
+  criarFilme(titulo, genero, duracao, dataLancamento, avaliacao, status, texto, imagem){
+    const novaFilme = {titulo, genero, duracao, dataLancamento, avaliacao, status, texto, imagem}
     const novoArrayFilmes = [...this.state.filmes, novaFilme]
     const novoEstado ={
       filmes: novoArrayFilmes
@@ -23,9 +23,12 @@ class App extends Component {
 
   render() {
     return (
-      <section className="conteudo">
-        <CadastrarFilme criarFilme = {this.criarFilme.bind(this)} />
-        <ListaDeFilmes filmes={this.state.filmes}/>
+      <section>
+        <p className="titulo">Metflix</p>
+          <section className="conteudo">
+            <CadastrarFilme criarFilme = {this.criarFilme.bind(this)} />
+            <ListaDeFilmes filmes={this.state.filmes}/>
+          </section>
       </section>
     );
   }

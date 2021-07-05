@@ -14,6 +14,7 @@ class BannerFilme extends Component {
         <p className="banner-filme_texto">{this.props.avaliacao}</p>
         <p className="banner-filme_texto">{this.props.status}</p>
         <p className="banner-filme_texto">{this.props.texto}</p>
+        <p className="banner-filme_texto">{this.props.imagem}</p>
       </section>
     );
   }

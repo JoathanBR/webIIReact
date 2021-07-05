@@ -12,6 +12,7 @@ class CadastrarFilme extends Component {
     this.avaliacao=""
     this.status=""
     this.texto=""
+    this.imagem=""
   }
 
   _handlerMudancaTitulo(evento){
@@ -49,10 +50,15 @@ class CadastrarFilme extends Component {
     this.status = evento.target.value
   }
 
+  _handlerMudancaImagem(evento){
+    evento.stopPropagation()
+    this.imagem = evento.target.value
+  }
+
   _criarFilme(evento){
     evento.preventDefault()
     evento.stopPropagation()
-    this.props.criarFilme(this.titulo, this.genero, this.duracao, this.dataLancamento, this.avaliacao, this.status, this.texto)
+    this.props.criarFilme(this.titulo, this.genero, this.duracao, this.dataLancamento, this.avaliacao, this.status, this.texto, this.imagem)
   }
 
   render() {
@@ -87,7 +93,7 @@ class CadastrarFilme extends Component {
           className="cadastrar-filme_input"
           onChange = {this._handlerMudancaDataLancamento.bind(this)}
         />
-
+        
         <input
           type="text"
           placeholder="Avaliação do filme"
@@ -108,6 +114,14 @@ class CadastrarFilme extends Component {
           className="cadastrar-filme_input"
           onChange = {this._handlerMudancaTexto.bind(this)}
         />
+
+        <input
+          type="file"
+          placeholder="Capa do Filme"
+          className="cadastrar-filme_input"
+          onChange = {this._handlerMudancaImagem.bind(this)}
+        />
+
         <button className="cadastrar-filme_input cadastrar-filme_submit">
           Adicionar Filme
         </button>

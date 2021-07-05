@@ -1,6 +1,6 @@
 
 .lista-filmes {
-    background-color: var(--fundo);
+    background-color: #39d63e;
     flex-grow: 3;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
@@ -13,5 +13,6 @@
     max-width: 240px;
     max-height: 400px;
     display: inline;
+    
   }
   

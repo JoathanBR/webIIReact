@@ -1,12 +1,21 @@
 .conteudo {
     display: flex;
+    background-color: #39d63e;
   }
   
   :root {
     --primaria: #58a4b0;
-    --secundaria: #373f51;
+    --secundaria: rgb(48, 47, 47);
     --secundaria-ativa: #cccccc;
     --fundo: #ffffff;
     --fundo-detalhes: #ececec;
   }
   
+.titulo {
+  font-size: 60px;
+  text-align: center;
+  color: #3cff00;
+  background-color: rgb(48, 47, 47);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 20px;
+}
