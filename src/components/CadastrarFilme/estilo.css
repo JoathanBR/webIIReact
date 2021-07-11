@@ -31,3 +31,7 @@
     background-color: var(--secundaria-ativa);
   }
   
+  .botao{
+    background: rgb(48, 47, 47);
+    color: #ffffff;
+}

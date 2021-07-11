@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { Button, TextField, Switch, FormControlLabel } from "@material-ui/core";
+import "./estilo.css";
 
 function CadastrarUsuario({aoEnviar, validarCPF}) {
   const [nome, setNome] = useState("");
   const [sobrenome, setSobrenome] = useState("");
   const [cpf, setCpf] = useState("");
-  const [promocoes, setPromocoes] = useState(true);
-  const [novidades, setNovidades] = useState(false);
+  const [novidades, setNovidades] = useState(true);
   const [erros, setErros] = useState({cpf:{valido:true, texto:""}})
 
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        aoEnviar({nome, sobrenome, cpf, novidades, promocoes})
+        aoEnviar({nome, sobrenome, cpf, novidades})
       }}
     >
       <TextField
@@ -21,11 +21,12 @@ function CadastrarUsuario({aoEnviar, validarCPF}) {
         onChange={(event) => {
           setNome(event.target.value);
         }}
-        id="nome"
+        id="Nome"
         label="Nome"
         variant="outlined"
         margin="normal"
         fullWidth
+        className = 'label'
       />
       <TextField
         value={sobrenome}
@@ -37,6 +38,7 @@ function CadastrarUsuario({aoEnviar, validarCPF}) {
         variant="outlined"
         margin="normal"
         fullWidth
+        className = 'label'
       />
       <TextField
         value={cpf}
@@ -55,21 +57,9 @@ function CadastrarUsuario({aoEnviar, validarCPF}) {
         variant="outlined"
         margin="normal"
         fullWidth
+        className = 'label'
       />
-
-      <FormControlLabel
-        label="Promoções"
-        control={
-          <Switch
-            checked= {promocoes}
-            onChange={(event) => {
-              setPromocoes(event.target.checked);
-            }}
-            name="promocoes"
-            color="primary"
-          />
-        }
-      />
+      
       <FormControlLabel
         label="Novidades"
         control={
@@ -84,7 +74,7 @@ function CadastrarUsuario({aoEnviar, validarCPF}) {
         }
       />
 
-      <Button type="submit" variant="contained" color="primary">
+      <Button type="submit" variant="contained" className="botao">
         Cadastrar
       </Button>
     </form>

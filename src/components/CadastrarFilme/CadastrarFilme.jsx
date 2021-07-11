@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./estilo.css";
+import { Button, TextField, Switch, FormControlLabel } from "@material-ui/core";
 
 class CadastrarFilme extends Component {
 
@@ -122,9 +123,9 @@ class CadastrarFilme extends Component {
           onChange = {this._handlerMudancaImagem.bind(this)}
         />
 
-        <button className="cadastrar-filme_input cadastrar-filme_submit">
+        <Button type="submit" variant="contained" className="botao" size="small">
           Adicionar Filme
-        </button>
+        </Button>
       </form>
     );
   }
