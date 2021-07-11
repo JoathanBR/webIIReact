@@ -59,7 +59,7 @@ function CadastrarUsuario({aoEnviar, validarCPF}) {
         fullWidth
         className = 'label'
       />
-      
+
       <FormControlLabel
         label="Novidades"
         control={
@@ -74,7 +74,7 @@ function CadastrarUsuario({aoEnviar, validarCPF}) {
         }
       />
 
-      <Button type="submit" variant="contained" className="botao">
+      <Button type="submit" variant="contained" color="primary">
         Cadastrar
       </Button>
     </form>

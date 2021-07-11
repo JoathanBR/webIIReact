@@ -29,7 +29,7 @@ class App extends Component {
       <section className="home">
         <p className="titulo">Metflix</p>
           <section className="conteudo">
-            <CadastrarFilme criarFilme = {this.criarFilme.bind(this)} />
+            <CadastrarFilme aoEnviarFilme = {aoEnviarFilme} />
             <ListaDeFilmes filmes={this.state.filmes}/>
           </section>
               <Container component="article" maxWidth="sm">
@@ -39,6 +39,21 @@ class App extends Component {
       </section>
     );
   }
+}
+
+function aoEnviarFilme(dados){
+  const titulo = dados.titulo
+  const genero = dados.genero
+  const duracao = dados.duracao
+  const dataLancamento = dados.dataLan
+  const avaliacao = dados.avaliacao
+  const status = dados.status
+  const descricao = dados.descricao
+  const imagem = dados.imagem
+  
+  const novoFilme = {titulo, genero, duracao, dataLancamento, avaliacao, status, descricao, imagem}
+
+  console.log(novoFilme)
 }
 
 function aoEnviarForm(dados){

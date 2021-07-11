@@ -1,134 +1,144 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./estilo.css";
-import { Button, TextField, Switch, FormControlLabel } from "@material-ui/core";
+import { Button, TextField} from "@material-ui/core";
 
-class CadastrarFilme extends Component {
+function CadastrarFilme({aoEnviarFilme}){
+  const [titulo, setTitulo] = useState("");
+  const [genero, setGenero] = useState("");
+  const [duracao, setDuracao] = useState("");
+  const [dataLan, setDataLan] = useState("");
+  const [avaliacao, setAvaliacao] = useState("");
+  const [status, setStatus] = useState("");
+  const [descricao, setDescricao] = useState("");
+  const [imagem, setImagem] = useState("");
+  //const [erros, setErros] = useState({cpf:{valido:true, texto:""}})
 
-  constructor(props){
-    super(props)
-    this.titulo=""
-    this.genero=""
-    this.duracao=""
-    this.dataLancamento=""
-    this.avaliacao=""
-    this.status=""
-    this.texto=""
-    this.imagem=""
-  }
-
-  _handlerMudancaTitulo(evento){
-    evento.stopPropagation()
-    this.titulo = evento.target.value
-  }
-
-  _handlerMudancaTexto(evento){
-    evento.stopPropagation()
-    this.texto = evento.target.value
-  }
-
-  _handlerMudancaGenero(evento){
-    evento.stopPropagation()
-    this.genero = evento.target.value
-  }
-
-  _handlerMudancaDuracao(evento){
-    evento.stopPropagation()
-    this.duracao = evento.target.value
-  }
-
-  _handlerMudancaDataLancamento(evento){
-    evento.stopPropagation()
-    this.dataLancamento = evento.target.value
-  }
-
-  _handlerMudancaAvaliacao(evento){
-    evento.stopPropagation()
-    this.avaliacao = evento.target.value
-  }
-
-  _handlerMudancaStatus(evento){
-    evento.stopPropagation()
-    this.status = evento.target.value
-  }
-
-  _handlerMudancaImagem(evento){
-    evento.stopPropagation()
-    this.imagem = evento.target.value
-  }
-
-  _criarFilme(evento){
-    evento.preventDefault()
-    evento.stopPropagation()
-    this.props.criarFilme(this.titulo, this.genero, this.duracao, this.dataLancamento, this.avaliacao, this.status, this.texto, this.imagem)
-  }
-
-  render() {
     return (
-      <form className="cadastrar-filme"
-        onSubmit = {this._criarFilme.bind(this)}
+      <form 
+        onSubmit={(event) => {
+          event.preventDefault();
+          aoEnviarFilme({titulo, genero, duracao, dataLan, avaliacao, status, descricao, imagem})
+      }}
+        className="cadastrar-filme"
       >
-        <input
-          type="text"
-          placeholder="Título do filme"
-          className="cadastrar-filme_input"
-          onChange = {this._handlerMudancaTitulo.bind(this)}
-        />
-
-          <input
-          type="text"
-          placeholder="Gênero do filme"
-          className="cadastrar-filme_input"
-          onChange = {this._handlerMudancaGenero.bind(this)}
-        />
-
-        <input
-          type="number"
-          placeholder="Duração do filme (minutos)"
-          className="cadastrar-filme_input"
-          onChange = {this._handlerMudancaDuracao.bind(this)}
-        />
-
-        <input
-          type="text"
-          placeholder="Data de lançamento do filme"
-          className="cadastrar-filme_input"
-          onChange = {this._handlerMudancaDataLancamento.bind(this)}
-        />
         
-        <input
-          type="text"
-          placeholder="Avaliação do filme"
-          className="cadastrar-filme_input"
-          onChange = {this._handlerMudancaAvaliacao.bind(this)}
+        <TextField
+          value={titulo}
+            onChange={(event) => {
+              setTitulo(event.target.value);
+          }}
+          value={titulo}
+          id="Titulo"
+          label="Titulo"
+          variant="outlined"
+          margin="normal"
+          fullWidth
+          className = 'label'
         />
 
-        <input
-          type="text"
-          placeholder="Status do filme"
-          className="cadastrar-filme_input"
-          onChange = {this._handlerMudancaStatus.bind(this)}
+        <TextField
+          value={genero}
+            onChange={(event) => {
+              setGenero(event.target.value);
+          }}
+          value={genero}
+          id="Genero"
+          label="Genero"
+          variant="outlined"
+          margin="normal"
+          fullWidth
+          className = 'label'
         />
 
-        <textarea
-          rows={15}
-          placeholder="Descrição do filme"
-          className="cadastrar-filme_input"
-          onChange = {this._handlerMudancaTexto.bind(this)}
+        <TextField
+          value={duracao}
+            onChange={(event) => {
+              setDuracao(event.target.value);
+          }}
+          value={duracao}
+          id="Duracao"
+          label="Duracao"
+          variant="outlined"
+          margin="normal"
+          fullWidth
+          className = 'label'
         />
 
-        <input
-          type="file"
-          placeholder="Capa do Filme"
-          className="cadastrar-filme_input"
-          onChange = {this._handlerMudancaImagem.bind(this)}
+        <TextField
+          value={dataLan}
+            onChange={(event) => {
+              setDataLan(event.target.value);
+          }}
+          value={dataLan}
+          id="DataLan"
+          label="DataLan"
+          variant="outlined"
+          margin="normal"
+          fullWidth
+          className = 'label'
         />
 
-        <Button type="submit" variant="contained" className="botao" size="small">
+        <TextField
+          value={avaliacao}
+            onChange={(event) => {
+              setAvaliacao(event.target.value);
+          }}
+          value={avaliacao}
+          id="Avaliacao"
+          label="Avaliacao"
+          variant="outlined"
+          margin="normal"
+          fullWidth
+          className = 'label'
+        />
+
+        <TextField
+          value={status}
+            onChange={(event) => {
+              setStatus(event.target.value);
+          }}
+          value={status}
+          id="Status"
+          label="Status"
+          variant="outlined"
+          margin="normal"
+          fullWidth
+          className = 'label'
+        />
+
+        <TextField
+          value={descricao}
+            onChange={(event) => {
+              setDescricao(event.target.value);
+          }}
+          value={descricao}
+          id="Descricao"
+          label="Descricao"
+          variant="outlined"
+          margin="normal"
+          fullWidth
+          className = 'label'
+        />
+
+        <TextField
+          value={imagem}
+            onChange={(event) => {
+              setImagem(event.target.value);
+          }}
+          value={imagem}
+          id="Imagem"
+          label="Imagem"
+          variant="outlined"
+          margin="normal"
+          fullWidth
+          className = 'label'
+        />
+
+        <Button type="submit" variant="contained" color="primary">
           Adicionar Filme
         </Button>
       </form>
     );
   }
-}
 
 export default CadastrarFilme;
