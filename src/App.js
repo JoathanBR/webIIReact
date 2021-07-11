@@ -3,6 +3,9 @@ import ListaDeFilmes from "./components/ListaDeFilmes";
 import CadastrarFilme from "./components/CadastrarFilme";
 import "./assets/App.css";
 import './assets/index.css';
+import CadastrarUsuario from './components/CadastrarUsuario/CadastrarUsuario';
+import {Container, Typography} from "@material-ui/core"
+
 class App extends Component {
 
   constructor(){
@@ -29,8 +32,24 @@ class App extends Component {
             <CadastrarFilme criarFilme = {this.criarFilme.bind(this)} />
             <ListaDeFilmes filmes={this.state.filmes}/>
           </section>
+              <Container component="article" maxWidth="sm">
+              <Typography variant="h3" component="h1" align="center">Formulário de Cadastro</Typography>
+            <CadastrarUsuario aoEnviar={aoEnviarForm} validarCPF={validarCPF} />
+             </Container>
       </section>
     );
+  }
+}
+
+function aoEnviarForm(dados){
+  console.log(dados)
+}
+
+function validarCPF(cpf){
+  if(cpf.length !== 11){
+    return {valido:false, texto:"CPF deve ter 11 dígitos"}
+  } else{
+    return {valido:true, texto:""}
   }
 }
 

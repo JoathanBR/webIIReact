@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./estilo.css";
-//import { Button, TextField, Switch, FormControlLabel } from "@material-ui/core";
 
 class CadastrarFilme extends Component {
 
