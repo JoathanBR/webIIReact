@@ -1,2 +1,2 @@
-import ListaDeNotas from "./ListaDeFilmes"
-export default ListaDeNotas
+import ListaDeFilmes from "./ListaDeFilmes"
+export default ListaDeFilmes

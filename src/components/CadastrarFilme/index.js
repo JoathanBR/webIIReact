@@ -1,2 +1,2 @@
-import FormularioCadastro from "./CadastrarFilme"
-export default FormularioCadastro
+import CadastrarFilme from "./CadastrarFilme"
+export default CadastrarFilme

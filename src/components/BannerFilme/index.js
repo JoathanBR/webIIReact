@@ -1,2 +1,2 @@
-import CardNota from "./BannerFilme"
-export default CardNota;
+import BannerFilme from "./BannerFilme"
+export default BannerFilme;
