@@ -34,7 +34,7 @@ class App extends Component {
           </section>
               <Container component="article" maxWidth="sm">
               <Typography style={{ backgroundColor: 'rgb(48, 47, 47)', color: '#3cff00'}} variant="h3" component="h1" align="center">Formulário de Cadastro</Typography>
-            <CadastrarUsuario aoEnviar={aoEnviarForm} validarCPF={validarCPF} />
+            <CadastrarUsuario  aoEnviarForm={aoEnviarForm} validarCPF={validarCPF} validarSenha={validarSenha} validarNome={validarNome} validarSobrenome={validarSobrenome} validarEmail={validarEmail} />
              </Container>
       </section>
     );
@@ -42,12 +42,49 @@ class App extends Component {
 }
 
 function aoEnviarForm(dados){
-  console.log(dados)
+  if(validarCPF(dados.cpf).valido === true && validarSenha(dados.senha['password']).valido === true && validarNome(dados).valido === true && validarSobrenome(dados).valido === true && validarEmail(dados).valido === true){
+    return console.log(dados)
+  } else{
+    return console.log("Dados não preenchidos corretamente")
+  }
 }
 
 function validarCPF(cpf){
   if(cpf.length !== 11){
     return {valido:false, texto:"CPF deve ter 11 dígitos"}
+  } else{
+    return {valido:true, texto:""}
+  }
+}
+
+function validarSenha(senha){
+  if(senha.length < 6){
+    return {valido:false, texto:"Senha deve ter mais de 5 caracteres"}
+
+  } else{
+    return {valido:true, texto:""}
+  }
+}
+
+function validarNome(nome){
+  if(nome.length <= 0){
+    return {valido:false, texto:"Nome Obrigatório"}
+  } else{
+    return {valido:true, texto:""}
+  }
+}
+
+function validarSobrenome(sobrenome){
+  if(sobrenome.length <= 0){
+    return {valido:false, texto:"Sobrenome Obrigatório"}
+  } else{
+    return {valido:true, texto:""}
+  }
+}
+
+function validarEmail(email){
+  if(email.length <= 0){
+    return {valido:false, texto:"Email Obrigatório"}
   } else{
     return {valido:true, texto:""}
   }
