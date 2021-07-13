@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import ListaDeFilmes from "./components/ListaDeFilmes";
 import CadastrarFilme from "./components/CadastrarFilme";
+import CadastrarUsuario from './components/CadastrarUsuario/CadastrarUsuario';
+import LoginUsuario from "./components/LoginUsuario/LoginUsuario";
 import "./assets/App.css";
 import './assets/index.css';
-import CadastrarUsuario from './components/CadastrarUsuario/CadastrarUsuario';
-import {Container, Typography} from "@material-ui/core"
+import {Container, Typography, MenuItem, MenuList, Paper } from "@material-ui/core"
 
 class App extends Component {
 
@@ -28,14 +29,31 @@ class App extends Component {
     return (
       <section className="home">
         <p className="titulo">Metflix</p>
+          <section className="menu">
+            <Paper className="paper">
+            <MenuList className="lista">
+              <MenuItem>Início</MenuItem>
+              <MenuItem>Cadastrar Usuário</MenuItem>
+              <MenuItem>Cadastrar Filme</MenuItem>
+              <MenuItem>Login</MenuItem>
+            </MenuList>
+            </Paper>
+          </section>
+
           <section className="conteudo">
             <CadastrarFilme criarFilme = {this.criarFilme.bind(this)} />
             <ListaDeFilmes filmes={this.state.filmes}/>
           </section>
-              <Container component="article" maxWidth="sm">
-              <Typography style={{ backgroundColor: 'rgb(48, 47, 47)', color: '#3cff00'}} variant="h3" component="h1" align="center">Formulário de Cadastro</Typography>
-            <CadastrarUsuario  aoEnviarForm={aoEnviarForm} validarCPF={validarCPF} validarSenha={validarSenha} validarNome={validarNome} validarSobrenome={validarSobrenome} validarEmail={validarEmail} />
+
+              <Container component="article" maxWidth="sm" className="formulario">
+              <Typography style={{ backgroundColor: 'rgb(48, 47, 47)', color: '#3cff00'}} variant="h3" component="h1" align="center">Cadastro de Usuário</Typography>
+              <CadastrarUsuario  aoEnviarForm={aoEnviarForm} validarCPF={validarCPF} validarSenha={validarSenha} validarNome={validarNome} validarSobrenome={validarSobrenome} validarEmail={validarEmail} />
              </Container>
+             <Container component="article" maxWidth="sm" className="formulario">
+              <Typography style={{ backgroundColor: 'rgb(48, 47, 47)', color: '#3cff00'}} variant="h3" component="h1" align="center">Login</Typography>
+              <LoginUsuario logar={logar} validarSenha={validarSenha} validarEmail={validarEmail} />
+              </Container>
+
       </section>
     );
   }
@@ -90,4 +108,7 @@ function validarEmail(email){
   }
 }
 
+function logar(dados){
+  console.log("Email: " + dados.email + " / Senha: " + dados.senha['password'])
+}
 export default App;

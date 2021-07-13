@@ -23,3 +23,7 @@
 .home {
   background-color: #39d63e;
 }
+
+.lista {
+  display: flex;
+}
