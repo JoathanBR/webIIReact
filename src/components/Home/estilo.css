@@ -1,0 +1,20 @@
+.inicio{
+    background-color: rgb(48, 47, 47);
+    color: #3cff00;
+}
+
+.titulo-inicio{
+    background: rgb(48, 47, 47);
+    color: #ffffff;
+    font-size: 50px;
+}
+
+.texto-home {
+    font-size: 50px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.corpo-inicio {
+    text-align: center;
+}

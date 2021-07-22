@@ -1,6 +1,6 @@
 .conteudo {
     display: flex;
-    background-color: #39d63e;
+    background-color: rgb(48, 47, 47);
   }
   
   :root {
@@ -26,4 +26,12 @@
 
 .lista {
   display: flex;
+}
+
+.corpo {
+  background-color: rgb(48, 47, 47);
+}
+
+.m {
+  color: #fffb00;
 }

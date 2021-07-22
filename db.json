@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "titulo": "X-men",
+      "descricao": "Os mutantes só querem paz, mas os humanos são um pé no saco e querem tirar a paz dos mutantes.",
+      "genero": "Ação",
+      "duracao": "150",
+      "dataLancamento": "10/10/2005",
+      "avaliacao": "Excelente"
+    },
+    {
+      "id": 2,
+      "titulo": "Os vingadores",
+      "descricao": "Aparece um vilão bixão que só derrotado se juntar todos heróis.",
+      "genero": "Ação",
+      "duracao": "350",
+      "dataLancamento": "25/07/2015",
+      "avaliacao": "Incrível"
+    }
+  ]
+}
