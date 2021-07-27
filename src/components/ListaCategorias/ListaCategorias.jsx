@@ -25,4 +25,4 @@ const ListaCategorias = () => {
     )
 }
 
-export default ListaCategorias
+export default ListaCategorias;

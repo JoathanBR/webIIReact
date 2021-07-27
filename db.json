@@ -5,8 +5,16 @@
       "nome": "Ação"
     },
     {
-      "id": "Drama",
-      "nome":"Drama"
+      "id": "Dança",
+      "nome":"Dança"
+    },
+    {
+      "id": "Comédia",
+      "nome":"Comédia"
+    },
+    {
+      "id": "Terror",
+      "nome":"Terror"
     }
   ],
 
@@ -35,11 +43,41 @@
       "id": 3,
       "titulo": "Flashdance",
       "descricao": "A protagonista começa a treinar bastante para conquistar a vaga para se tornar uma grande bailarina.",
-      "genero": "Drama",
+      "genero": "Dança",
       "duracao": "250",
       "dataLancamento": "25/07/1983",
       "avaliacao": "Incrível",
       "capa": "https://vitaminanerd.com.br/wp-content/uploads/2019/04/Flashdance-Capa.png"
+    },
+    {
+      "id": 4,
+      "titulo": "American Pie",
+      "descricao": "Estudantes que estão a procura de perder a virgindade fazem um trato para todos tentarem conseguir.",
+      "genero": "Comédia",
+      "duracao": "250",
+      "dataLancamento": "09/07/1999",
+      "avaliacao": "Mediano",
+      "capa": "https://criticosbotequim.files.wordpress.com/2012/04/american-pie1.jpg"
+    },
+    {
+      "id": 5,
+      "titulo": "Freddy VS Jason",
+      "descricao": "O crossover mais esperado de todos os tempos. Freddy revive Jason para poder botar medo nas pessoas e voltar sua fama em Elm Street.",
+      "genero": "Terror",
+      "duracao": "2400",
+      "dataLancamento": "31/10/2003",
+      "avaliacao": "Bom",
+      "capa": "https://cdn.panrotas.com.br/portal-panrotas-statics/media-files-original/2015/06/10/fvjfeatured.jpg"
+    },
+    {
+      "id": 6,
+      "titulo": "Footloose",
+      "descricao": "O protagonista muda de cidade e lá é proibido a dança, seu passatempo favorito. Agora ele faz de tudo para que a dança seja bem vista na cidade.",
+      "genero": "Dança",
+      "duracao": "250",
+      "dataLancamento": "13/07/1984",
+      "avaliacao": "Incrível",
+      "capa": "https://images-na.ssl-images-amazon.com/images/I/81p-pGuEVaL._AC_SL1500_.jpg"
     }
   ]
 }
