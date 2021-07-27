@@ -10,6 +10,7 @@ import Home from "./components/Home/Home";
 import Pagina404 from "./components/Pagina404/Página404";
 import Post from "./components/Post/Post";
 import Catalago from "./components/Catalago/Catalago";
+import Categoria from "./components/Categoria/Categoria";
 import "./assets/App.css";
 import "./assets/index.css";
 
@@ -46,6 +47,10 @@ class App extends Component {
 
             <Route path="/catalogo">
               <Catalago />
+            </Route>
+
+            <Route path="/categoria/:id">
+              <Categoria />
             </Route>
 
             <Route path="/posts/:id">

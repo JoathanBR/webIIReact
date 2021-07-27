@@ -18,6 +18,7 @@ const ListaPost = ({url}) => {
             <Link className={`${post.genero}`} to={`/posts/${post.id}`}>
               <article key={post.id}>
                 <h3 className="post-titulo">
+                  <img className="capa" src={post.capa} alt={post.titulo} ></img>
                   {post.titulo}
                 </h3>
               </article>

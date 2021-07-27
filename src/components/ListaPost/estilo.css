@@ -3,10 +3,16 @@
 }
 
 .posts {
-    font-size: 40px;
+    font-size: 30px;
     padding: 10px;
 }
 
 .post-titulo {
     color: #ffffff;
+}
+
+.capa {
+    height: 200px;
+    width: 280px;
+    margin: 10px;
 }

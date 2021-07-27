@@ -1,4 +1,15 @@
 {
+  "categorias": [
+    {
+      "id": "Ação",
+      "nome": "Ação"
+    },
+    {
+      "id": "Drama",
+      "nome":"Drama"
+    }
+  ],
+
   "posts": [
     {
       "id": 1,
@@ -7,7 +18,8 @@
       "genero": "Ação",
       "duracao": "150",
       "dataLancamento": "10/10/2005",
-      "avaliacao": "Excelente"
+      "avaliacao": "Excelente",
+      "capa": "https://cdn.pocket-lint.com/r/s/1200x/assets/images/149551-tv-feature-what-is-the-best-order-to-watch-the-x-men-movies-image1-y5wpzep24w.jpg"
     },
     {
       "id": 2,
@@ -16,7 +28,18 @@
       "genero": "Ação",
       "duracao": "350",
       "dataLancamento": "25/07/2015",
-      "avaliacao": "Incrível"
+      "avaliacao": "Incrível",
+      "capa": "https://www.nivelepico.com/wp-content/uploads/2012/04/os-vingadores-2012-especial-0.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "Flashdance",
+      "descricao": "A protagonista começa a treinar bastante para conquistar a vaga para se tornar uma grande bailarina.",
+      "genero": "Drama",
+      "duracao": "250",
+      "dataLancamento": "25/07/1983",
+      "avaliacao": "Incrível",
+      "capa": "https://vitaminanerd.com.br/wp-content/uploads/2019/04/Flashdance-Capa.png"
     }
   ]
 }

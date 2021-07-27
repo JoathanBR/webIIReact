@@ -1,0 +1,13 @@
+.lista-categorias {
+    display: flex;
+    margin: 10px;
+
+}
+
+.Ação {
+    padding-right: 20px;
+}
+
+.Drama {
+    padding-right: 20px;
+}
